@@ -15,7 +15,7 @@ Browser interprets an HTML file by parsing it. During the process of tokenisatio
 
 The tokens formed above are converted to the nodes which are objects with certain properties. Each node can be considered as a single entity which is used to form a tree data structure by linking those nodes. This combination of nodes is known as DOM(Document object model). Each node in the DOM has some sort of relationship with other nodes which could be:
 
-* Parent Child relationship
+* Parent-Child relationship
 * Sibling relationship
 
 The construction of DOM tree is the first process a browser needs to go through before anything else. 
@@ -45,9 +45,9 @@ Render tree is another tree which calculates the layout of each element and show
 
 The first rule for the optimisation of website includes getting HTML and CSS to the client as soon as possible. So the HTML and CSS are render blocking the resources while they are being delivered.
 
-### Introduction of Javascript
+## Introduction of Javascript
 
-The problem with javascript is that it can add or remove the DOM tree elements as well as modify the CSS properties. When we introduce javascript earlier in the **head** section, it stops the DOM construction process until the script finishes, which can slow down the execution of a page and keep the users waiting. The best way to use javascript is after the DOM and CSSOM trees are formed. This can also be solved by using async keyword which will let the DOM construction to continue and execute scripts only when they are done downloading and are ready.
+Javascript is fetched by the web browser, when it encounters **script** tag in the HTML file, which can be external or embedded. The problem with javascript is that it can add or remove the DOM tree elements as well as modify the CSS properties. When we introduce javascript earlier in the **head** section, it stops the DOM construction process until the script finishes, which can slow down the execution of a page and keep the users waiting. The best way to use javascript is after the DOM and CSSOM trees are formed. This can also be solved by using async keyword which will let the DOM construction to continue and execute scripts only when they are done downloading and are ready.
 
 ## References
 
